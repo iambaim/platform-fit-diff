@@ -1,3 +1,6 @@
+install.packages(c("iterators", "ggplot2", "gridExtra", "rlang", "scales"))
+install.packages(c("FLCore", "ggplotFL", "FLBRP", "FLash"), repos="http://flr-project.org/R")
+
 library(FLCore)
 library(FLBRP)
 
@@ -36,4 +39,4 @@ pr2 <- predict_recruitment(stk2, shepherd)
 print(pr1$rec)
 print(pr2$rec)
 
-all.equal(stk1, stk2, tolerance=0)
+print(all.equal(stk1, stk2, tolerance=0))
